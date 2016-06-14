@@ -17,7 +17,8 @@
                  [org.webjars/normalize.css "3.0.2"]
                  [duct/hikaricp-component "0.1.0"]
                  [org.postgresql/postgresql "9.4.1208"]
-                 [duct/ragtime-component "0.1.4"]]
+                 [duct/ragtime-component "0.1.4"]
+                 [com.layerware/hugsql "0.4.7"]]
   :plugins [[lein-environ "1.0.3"]
             [lein-cljsbuild "1.1.2"]]
   :main ^:skip-aot galliforme.main

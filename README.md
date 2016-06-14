@@ -6,6 +6,21 @@ use over extended features.
 **NB**: This project is mostly an excuse to play with web-develpment in clojure.
 As of now it does not provide any useful feature.
 
+## Install
+
+Install postgresql. Then run the following commands in a terminal:
+
+```bash
+sudo su - postgres
+psql <<EOSQL
+  DROP DATABASE IF EXISTS "gall";
+  DROP USER IF EXISTS "gall";
+  CREATE USER gall WITH PASSWORD 'gallpass';
+  CREATE DATABASE gall OWNER gall ENCODING 'UTF8' TEMPLATE template0;
+EOSQL
+exit
+```
+
 ## Developing
 
 ### Setup
