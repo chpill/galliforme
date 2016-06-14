@@ -1,6 +1,10 @@
 # galliforme
 
-FIXME: description
+This is a small web-app to create and track tasks. It should emphasize ease of
+use over extended features.
+
+**NB**: This project is mostly an excuse to play with web-develpment in clojure.
+As of now it does not provide any useful feature.
 
 ## Developing
 
@@ -149,4 +153,4 @@ FIXME: steps to deploy
 
 ## Legal
 
-Copyright © 2016 FIXME
+Copyright © 2016 chpill
