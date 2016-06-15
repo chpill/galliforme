@@ -19,7 +19,10 @@
                       [wrap-defaults :defaults]
                       [wrap-route-aliases :aliases]]
          :not-found  (io/resource "galliforme/errors/404.html")
-         :defaults   (meta-merge site-defaults {:static {:resources "galliforme/public"}})
+         :defaults   (meta-merge site-defaults
+                                 {:static {:resources "galliforme/public"}
+                                  ;; FIXME learn more about csrf with ring
+                                  :security {:anti-forgery false}})
          :aliases    {"/" "/index.html"}}
    :ragtime {:resource-path "galliforme/migrations"}})
 

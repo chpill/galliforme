@@ -18,7 +18,9 @@
                  [duct/hikaricp-component "0.1.0"]
                  [org.postgresql/postgresql "9.4.1208"]
                  [duct/ragtime-component "0.1.4"]
-                 [com.layerware/hugsql "0.4.7"]]
+                 [com.layerware/hugsql "0.4.7"]
+                 [crypto-password "0.2.0"]
+                 [org.clojure/data.json "0.2.6"]]
   :plugins [[lein-environ "1.0.3"]
             [lein-cljsbuild "1.1.2"]]
   :main ^:skip-aot galliforme.main
