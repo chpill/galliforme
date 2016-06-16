@@ -11,7 +11,8 @@
             [ring.component.jetty :refer [jetty-server]]
             [ring.middleware.defaults :refer [wrap-defaults site-defaults]]
             [ring.middleware.webjars :refer [wrap-webjars]]
-            [galliforme.endpoint.example :refer [example-endpoint]]))
+            [galliforme.endpoint.example :refer [example-endpoint]]
+            [galliforme.endpoint.users :refer [users-endpoint]]))
 
 (def base-config
   {:app {:middleware [[wrap-not-found :not-found]
@@ -33,9 +34,11 @@
          :http (jetty-server (:http config))
          :db   (hikaricp (:db config))
          :ragtime (ragtime (:ragtime config))
-         :example (endpoint-component example-endpoint))
+         :example (endpoint-component example-endpoint)
+         :users (endpoint-component users-endpoint))
         (component/system-using
          {:http [:app]
-          :app  [:example]
+          :app  [:example :users]
           :ragtime [:db]
-          :example [:db]}))))
+          :users [:db]}))))
+
