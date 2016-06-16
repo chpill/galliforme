@@ -6,6 +6,12 @@ use over extended features.
 **NB**: This project is mostly an excuse to play with web-develpment in clojure.
 As of now it does not provide any useful feature.
 
+## TODO / ideas
+
+* try to bump to clojure 1.9-alpha
+* validate incoming POST payloads (spec?)
+* make unit tests for users (mock db component etc...)
+
 ## Install
 
 Install postgresql. Then run the following commands in a terminal:
